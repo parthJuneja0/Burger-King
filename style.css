@@ -1,0 +1,248 @@
+/* CSS Reset  */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+}
+html{
+scroll-behavior :smooth;
+}
+/* CSS Variables  */
+
+/* Navigation bar  */
+nav {
+    display: flex;
+}
+
+/* Image and logo  */
+
+#logo img {
+    height: 95px;
+    width: 138px;
+    background-repeat: no-repeat;
+    /* !! New property discovered !!  */
+    filter: contrast(3);
+
+}
+
+/* Why use before psuedo selector for this 
+nav{
+    background-color: black;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+}
+Because opacity of logo image and text also got reduced  */
+
+
+/* Navigation menu  */
+nav {
+    height: 100px;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    
+    
+    /* Nav becomes relative to its own position  */
+    /* !!! hieght and width of before equals to that of nav ... Bur WHY? !!! */
+}
+
+nav::before {
+    content: "";
+    /* What the heck happened without position: absolute;  */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: black;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    
+}
+
+nav ul li a:hover {
+
+    color: black;
+    background-color: white
+}
+
+
+/* Home Section  */
+#sec-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 600px;
+    margin: auto;
+    height: 320px;
+    margin-top: 60px;
+}
+
+#sec-1::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    /* ../ is to go to parent folder  */
+    background: url(../Images/burger-3199088_640.jpg) no-repeat center center/cover;
+    /* background-attachment: fixed; */
+    z-index: -1;
+    height: 500px;
+    width: 100%;
+    /* opacity: 0.85; */
+
+}
+
+#sec-1 h1 {
+    
+    font-size: 3rem;
+    text-shadow: 1px 1px 0px white;
+}
+
+#sec-1 p {
+    
+    font-size: large;
+    font-weight: 300;
+    text-shadow: 0px 0px 2px white;
+}
+
+#sec-1 button {
+    
+    height: 60px;
+    width: 200px;
+    
+    font-size: 20px;
+    color: white;
+    border: 4px solid white;
+    border-radius: 4px;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.55);
+    cursor: pointer;
+}
+
+#sec-1 button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+/* Services section  */
+#sec-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 12px;
+}
+
+
+
+#sec-2 img {
+    height: 100px;
+    width: 100px;
+}
+
+#sec-2 h1 {
+    font-size: 35px;
+    padding: 20px;
+}
+
+#sec-2 #service {
+    display: flex;
+    padding: 0px 10px;
+}
+
+#sec-2 #service .box {
+    border: 3px solid black;
+    background-color: #cdffc3;
+    margin: 0px 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+#sec-3 {
+    margin: 42px;
+
+}
+
+#sec-3::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    height: 40%;
+    width: 100%;
+    background: url(../Images/delicious-pizza-pepperoni-pizza-wallpaper-preview.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    opacity: 1.0;
+    z-index: -1;
+}
+
+#sec-3 h1 {
+    font-size: 35px;
+    text-shadow: 5px 5px 5px white;
+}
+
+#sec-3 img {
+    padding: 20px;
+    filter: contrast(3);
+
+}
+
+#sec-3 #images {
+    border-radius: 44px;
+    padding: 20px;
+}
+
+#sec-4 h1{
+    padding: 0px;
+    padding-bottom: 10px;
+}
+
+#sec-4 input {
+    height: 50px;
+    width: 300px;
+}
+
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: block;
+    color: white;
+    background-color: black;
+    margin-top: 40px;
+}
