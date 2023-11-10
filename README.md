@@ -19,5 +19,7 @@ This project was created when I was just starting to learn web development. The 
 
 ## Usage
 
-You can also clone the repository to use it.
+Explore the project by visiting the hosted site on GitHub Pages: https://parthjuneja0.github.io/Burger-King
+
+Alternatively, you can also clone the repository to use it.
 
